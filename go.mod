@@ -1,2 +1,2 @@
-module raulc27/fullcycle8desafio1
+module raulc27/codeeducation
 go 1.16

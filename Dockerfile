@@ -1,12 +1,12 @@
-FROM golang:1.16 AS builder
+FROM golang:1.17 AS builder
 
 RUN mkdir /build
 ADD go.mod main.go /build/
 WORKDIR /build
 RUN go build
 
-FROM alpine
-COPY --from=builder /build/fullcycle8desafio1 /app/
+FROM scratch AS final_image
+COPY --from=builder /build/codeeducation /app/
 WORKDIR /app
 
-CMD ["./fullcycle8desafio1"]
+CMD ["./codeeducation"]
