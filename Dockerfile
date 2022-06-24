@@ -1,9 +1,12 @@
-FROM golang:1.16
+FROM golang:1.16 AS builder
 
-WORKDIR /go/src/desafio1
-ENV PATH="/go/bin:${PATH}"
+RUN mkdir /build
+ADD go.mod main.go /build/
+WORKDIR /build
+RUN go build
 
-RUN go get -d -v ./...
-RUN go install -v ./...
+FROM alpine
+COPY --from=builder /build/fullcycle8desafio1 /app/
+WORKDIR /app
 
-CMD ["go","run","main.go"]
+CMD ["./fullcycle8desafio1"]
