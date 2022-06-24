@@ -10,6 +10,8 @@ docker run raulc27/codeeducation
 docker run -it raulc27/codeeducation
 </code>
 
+### visite o repositório da imagem:
+
 <a href="https://hub.docker.com/r/raulc27/codeeducation">https://hub.docker.com/r/raulc27/codeeducation</a>
 
 Imersão Full Cycle 8 - Desafio 1
