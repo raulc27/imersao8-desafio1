@@ -3,7 +3,9 @@
 <code>
 docker run raulc27/codeeducation
 </code>
+<br/>
 ### ou
+<br/>
 <code>
 docker run -it raulc27/codeeducation
 </code>
